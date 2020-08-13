@@ -1,7 +1,6 @@
 body, html{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffeead;
-    
     height: 100%;
 }
 
@@ -13,7 +12,7 @@ body, html{
     text-transform: uppercase;
     font-size: 30px;
     color: #ffeead;
-    grid-gap: 3px;
+    grid-gap: 0px;
     grid-template-areas: 
     "m m e e e e e e e e e e"
     "m m c c c c c c c c c c"
@@ -29,39 +28,31 @@ body, html{
 .encabezado{
     background-color: #96ceb4;
     grid-area: e;
-    
 }
 
 .menu{
     background-color: red;
-    grid-column: 1/3;
     grid-area: m;
 }
 
 .contenido{
-    
     background-color: #88d8b0;
-    grid-column: 3/-1;
     grid-area: c;
 }
 
 .pie{
     background-color: yellow;
-    grid-column: 1/-1;
     grid-area: p;
-
 }
 
 @media (max-width: 500px){
     .contenedor{
         grid-template-rows: 80px 150px auto 80px;
-    }
-
-    .menu{
-        grid-column: 1/-1;
-    }
-    
-    .contenido{
-        grid-column: 1/-1;
+        grid-template-areas: 
+        "e e e e e e e e e e e e"
+        "m m m m m m m m m m m m"
+        "c c c c c c c c c c c c"
+        "p p p p p p p p p p p p"
+        ;
     }
 }
